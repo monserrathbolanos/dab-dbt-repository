@@ -1,3 +1,9 @@
+{{
+  config(
+    materialized='table'
+  )
+}}
+
 SELECT
   ### Key ###  
   product_id
@@ -8,3 +14,8 @@ FROM `raw_data_circle.raw_cc_sales`
 WHERE 
 	date_date >= DATE_SUB('2021-10-01',INTERVAL 91 DAY)
 GROUP BY product_id
+{{
+  config(
+    materialized='table'
+  )
+}}
