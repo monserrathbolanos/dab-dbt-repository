@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: cc_sales_products
+    columns:
+      ### PK ###
+      - name: avg_daily_qty_91
+        tests:
+          - not_null
